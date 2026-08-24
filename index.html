@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alícia Lemos Melo — Psicóloga Clínica | CRP 02/34070</title>
+<meta name="description" content="Atendimento psicológico para adultos, crianças e casais, com abordagem em Gestalt-terapia. Um espaço de escuta, presença e acolhimento com a psicóloga Alícia Lemos Melo, CRP 02/34070.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://aliciapsicologa.com.br/">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Alícia Lemos Melo — Psicóloga Clínica">
+<meta property="og:description" content="Um espaço de escuta para você se reencontrar. Atendimento online para adultos, crianças e casais.">
+<meta property="og:image" content="assets/alicia-foto.jpeg">
+<meta property="og:url" content="https://aliciapsicologa.com.br/">
+<meta property="og:site_name" content="Alícia Lemos Melo Psicologia">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Alícia Lemos Melo — Psicóloga Clínica">
+<meta name="twitter:description" content="Um espaço de escuta para você se reencontrar.">
+<meta name="twitter:image" content="assets/alicia-foto.jpeg">
+
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#F5EFE3;
+    --paper:#FBF7EE;
+    --espresso:#2B2119;
+    --espresso-soft:#5A4E42;
+    --clay:#B87D50;
+    --clay-deep:#9C6640;
+    --sage:#6E7A5A;
+    --gold:#B08F35;
+    --line:#E2D5BE;
+    --shadow: 0 30px 60px -30px rgba(43,33,25,0.25);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--espresso);
+    font-family:'Inter',sans-serif;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,.display{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    letter-spacing:-0.01em;
+    margin:0;
+  }
+  a{text-decoration:none;color:inherit;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 32px;}
+
+  /* ---------- NAV ---------- */
+  nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(245,239,227,0.86);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:18px 32px;max-width:1180px;margin:0 auto;
+  }
+  .brand{display:flex;align-items:center;gap:12px;}
+  .brand-mark{
+    width:34px;height:34px;border-radius:50%;
+    border:1.4px solid var(--espresso);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Fraunces',serif;font-size:18px;color:var(--espresso);
+  }
+  .brand-text .name{font-family:'Fraunces',serif;font-size:16px;letter-spacing:0.02em;}
+  .brand-text .role{font-size:10.5px;letter-spacing:0.12em;color:var(--espresso-soft);text-transform:uppercase;}
+  .nav-cta{
+    background:var(--espresso);color:var(--cream);
+    padding:11px 22px;border-radius:100px;font-size:13.5px;font-weight:500;
+    letter-spacing:0.01em;
+    transition:background .25s ease, transform .25s ease;
+  }
+  .nav-cta:hover{background:var(--clay-deep);transform:translateY(-1px);}
+  .nav-links{display:flex;gap:34px;font-size:13.5px;color:var(--espresso-soft);}
+  @media (max-width:860px){.nav-links{display:none;}}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    display:grid;grid-template-columns:1.02fr 0.98fr;align-items:center;
+    gap:56px;padding:72px 32px 96px;max-width:1180px;margin:0 auto;
+    position:relative;
+  }
+  @media (max-width:960px){.hero{grid-template-columns:1fr;padding:44px 24px 64px;gap:40px;}}
+
+  .psi-watermark{
+    position:absolute;right:-40px;top:-60px;font-family:'Fraunces',serif;
+    font-size:420px;color:var(--espresso);opacity:0.035;line-height:1;
+    pointer-events:none;user-select:none;
+  }
+  @media (max-width:960px){.psi-watermark{display:none;}}
+
+  .eyebrow{
+    font-size:12px;letter-spacing:0.16em;text-transform:uppercase;
+    color:var(--clay-deep);font-weight:600;margin-bottom:18px;
+    display:flex;align-items:center;gap:10px;
+  }
+  .eyebrow::before{content:"";width:26px;height:1px;background:var(--clay-deep);display:inline-block;}
+
+  .hero h1{
+    font-size:clamp(34px,4.4vw,54px);
+    line-height:1.12;
+    color:var(--espresso);
+    max-width:560px;
+  }
+  .hero h1 em{
+    font-style:italic;color:var(--clay-deep);
+  }
+  .hero p.lede{
+    margin-top:22px;font-size:17px;line-height:1.7;color:var(--espresso-soft);
+    max-width:460px;
+  }
+  .hero-ctas{display:flex;gap:16px;margin-top:34px;flex-wrap:wrap;}
+  .btn-primary{
+    background:var(--espresso);color:var(--cream);padding:15px 28px;border-radius:100px;
+    font-size:14.5px;font-weight:500;transition:all .25s ease;display:inline-flex;align-items:center;gap:8px;
+  }
+  .btn-primary:hover{background:var(--clay-deep);transform:translateY(-2px);box-shadow:var(--shadow);}
+  .btn-secondary{
+    padding:15px 26px;border-radius:100px;font-size:14.5px;font-weight:500;
+    border:1px solid var(--espresso); color:var(--espresso);
+    transition:all .25s ease;
+  }
+  .btn-secondary:hover{background:var(--espresso);color:var(--cream);}
+
+  .hero-figure{position:relative;}
+  .hero-photo{
+    border-radius:18px;overflow:hidden;box-shadow:var(--shadow);
+    position:relative;
+  }
+  .hero-photo img{width:100%;height:100%;object-fit:cover;aspect-ratio:3/4;object-position:13% center;}
+
+  .credential-float{
+    position:absolute;left:-34px;bottom:-30px;
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:16px 20px;
+    box-shadow:var(--shadow);
+    display:flex;align-items:center;gap:14px;
+    max-width:280px;
+  }
+  @media (max-width:960px){.credential-float{left:16px;bottom:-24px;}}
+  .credential-float .psi-badge{
+    width:38px;height:38px;border-radius:50%;border:1.4px solid var(--espresso);
+    display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;
+    font-size:19px;flex-shrink:0;
+  }
+  .credential-float .cred-name{font-size:13.5px;font-weight:600;letter-spacing:0.01em;}
+  .credential-float .cred-role{font-size:11px;color:var(--espresso-soft);margin-top:2px;}
+  .credential-float .cred-crp{font-size:10.5px;color:var(--clay-deep);margin-top:5px;letter-spacing:0.03em;font-weight:600;}
+
+  /* ---------- MARQUEE STRIP ---------- */
+  .strip{
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    background:var(--paper);
+    padding:20px 0;overflow:hidden;
+  }
+  .strip-track{
+    display:flex;gap:48px;white-space:nowrap;
+    animation:scroll 32s linear infinite;
+    width:max-content;
+  }
+  .strip-track span{
+    font-family:'Fraunces',serif;font-style:italic;font-size:19px;color:var(--espresso-soft);
+    display:flex;align-items:center;gap:48px;
+  }
+  .strip-track span::after{content:"Ψ";font-style:normal;color:var(--clay);opacity:0.5;margin-left:48px;}
+  @keyframes scroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+  @media (prefers-reduced-motion:reduce){.strip-track{animation:none;}}
+
+  /* ---------- SECTION SHELL ---------- */
+  section{padding:100px 32px;}
+  @media (max-width:860px){section{padding:64px 24px;}}
+  .section-inner{max-width:1180px;margin:0 auto;}
+  .section-head{max-width:600px;margin-bottom:56px;}
+  .section-head h2{font-size:clamp(28px,3.2vw,38px);line-height:1.2;}
+  .section-head p{margin-top:16px;font-size:16px;color:var(--espresso-soft);line-height:1.7;}
+
+  /* ---------- SOBRE ---------- */
+  .sobre{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .sobre-grid{display:grid;grid-template-columns:0.85fr 1.15fr;gap:64px;align-items:start;}
+  @media (max-width:900px){.sobre-grid{grid-template-columns:1fr;gap:36px;}}
+  .sobre-quote{
+    font-family:'Fraunces',serif;font-style:italic;font-size:24px;line-height:1.5;
+    color:var(--espresso);border-left:2px solid var(--clay);padding-left:24px;
+  }
+  .sobre-body p{font-size:16px;line-height:1.8;color:var(--espresso-soft);margin:0 0 18px;}
+  .sobre-signature{margin-top:26px;display:flex;align-items:center;gap:14px;}
+  .sobre-signature .line{width:44px;height:1px;background:var(--espresso);}
+  .sobre-signature .cred{font-size:12.5px;color:var(--espresso-soft);letter-spacing:0.02em;}
+
+  /* ---------- ÁREAS / CARDS ---------- */
+  .areas-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  @media (max-width:900px){.areas-grid{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:600px){.areas-grid{grid-template-columns:1fr;}}
+  .area-card{
+    background:var(--paper);border:1px solid var(--line);border-radius:16px;
+    padding:32px 26px;transition:transform .3s ease, box-shadow .3s ease;
+  }
+  .area-card:hover{transform:translateY(-6px);box-shadow:var(--shadow);}
+  .area-card .mark{
+    width:40px;height:40px;border-radius:50%;background:var(--cream);
+    display:flex;align-items:center;justify-content:center;margin-bottom:20px;
+    font-family:'Fraunces',serif;color:var(--clay-deep);font-size:18px;border:1px solid var(--line);
+  }
+  .area-card h3{font-size:18px;margin-bottom:10px;}
+  .area-card p{font-size:14.5px;color:var(--espresso-soft);line-height:1.65;margin:0;}
+
+  /* ---------- PROCESSO ---------- */
+  .processo{background:var(--espresso);color:var(--cream);}
+  .processo .section-head h2{color:var(--cream);}
+  .processo .section-head p{color:#C9BCA9;}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;}
+  @media (max-width:900px){.steps{grid-template-columns:1fr;gap:36px;}}
+  .step{border-top:1px solid rgba(245,239,227,0.2);padding-top:22px;}
+  .step .num{font-family:'Fraunces',serif;font-style:italic;font-size:15px;color:var(--clay);}
+  .step h3{font-size:19px;margin:14px 0 10px;color:var(--cream);}
+  .step p{font-size:14.5px;line-height:1.7;color:#C9BCA9;margin:0;}
+
+  /* ---------- CTA FINAL ---------- */
+  .cta-final{
+    background:var(--paper);border-top:1px solid var(--line);
+  }
+  .cta-box{
+    background:var(--espresso);color:var(--cream);border-radius:22px;
+    padding:64px 48px;display:flex;justify-content:space-between;align-items:center;gap:40px;
+    position:relative;overflow:hidden;
+  }
+  @media (max-width:800px){.cta-box{flex-direction:column;text-align:center;padding:48px 28px;}}
+  .cta-box h2{color:var(--cream);font-size:clamp(26px,3vw,34px);max-width:420px;}
+  .cta-box .psi-deco{
+    position:absolute;right:-30px;bottom:-60px;font-family:'Fraunces',serif;
+    font-size:220px;color:var(--cream);opacity:0.05;
+  }
+  .cta-box .btn-primary{background:var(--clay);color:var(--espresso);}
+  .cta-box .btn-primary:hover{background:var(--cream);}
+
+  /* ---------- FOOTER ---------- */
+  footer{padding:48px 32px 40px;border-top:1px solid var(--line);}
+  .footer-inner{
+    max-width:1180px;margin:0 auto;display:flex;justify-content:space-between;
+    align-items:center;flex-wrap:wrap;gap:20px;
+  }
+  .footer-inner .f-brand{font-family:'Fraunces',serif;font-size:15px;}
+  .footer-inner .f-crp{font-size:12px;color:var(--espresso-soft);margin-top:4px;}
+  .footer-links{display:flex;gap:26px;font-size:13px;color:var(--espresso-soft);}
+
+  /* reveal on scroll */
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease, transform .7s ease;}
+  .reveal.in{opacity:1;transform:translateY(0);}
+
+  /* ---------- FORM ---------- */
+  .form-card{
+    background:var(--paper);border:1px solid var(--line);border-radius:22px;
+    padding:48px;margin-top:28px;
+  }
+  @media (max-width:800px){.form-card{padding:32px 24px;}}
+  .form-card h3{font-size:20px;margin-bottom:8px;}
+  .form-card .form-lede{font-size:14.5px;color:var(--espresso-soft);margin:0 0 28px;max-width:480px;}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px;}
+  @media (max-width:640px){.form-row{grid-template-columns:1fr;}}
+  .field label{
+    display:block;font-size:12.5px;letter-spacing:0.03em;color:var(--espresso-soft);
+    margin-bottom:7px;font-weight:500;
+  }
+  .field input, .field textarea{
+    width:100%;border:1px solid var(--line);background:#fff;border-radius:10px;
+    padding:12px 14px;font-family:'Inter',sans-serif;font-size:14.5px;color:var(--espresso);
+    resize:vertical;
+  }
+  .field input:focus, .field textarea:focus{outline:none;border-color:var(--clay-deep);}
+  .field.full{margin-bottom:22px;}
+  .form-submit{
+    background:var(--espresso);color:var(--cream);border:none;border-radius:100px;
+    padding:15px 30px;font-size:14.5px;font-weight:500;cursor:pointer;
+    display:inline-flex;align-items:center;gap:9px;transition:all .25s ease;
+    font-family:'Inter',sans-serif;
+  }
+  .form-submit:hover{background:var(--clay-deep);transform:translateY(-2px);}
+  .form-note{font-size:12px;color:var(--espresso-soft);margin-top:14px;}
+
+  :focus-visible{outline:2px solid var(--clay-deep);outline-offset:3px;}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="brand">
+      <div class="brand-mark">Ψ</div>
+      <div class="brand-text">
+        <div class="name">Alícia Lemos Melo</div>
+        <div class="role">Psicóloga Clínica</div>
+      </div>
+    </div>
+    <div class="nav-links">
+      <a href="#sobre">Sobre</a>
+      <a href="#publicos">Atendimento</a>
+      <a href="#processo">Como funciona</a>
+    </div>
+    <a href="#agendar" class="nav-cta">Agendar sessão</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="psi-watermark">Ψ</div>
+  <div class="hero-copy">
+    <div class="eyebrow">Psicologia clínica · Gestalt-terapia · CRP 02/34070</div>
+    <h1>Um espaço de escuta para você <em>se reencontrar</em>.</h1>
+    <p class="lede">Atendimento psicológico online para adultos, crianças e casais, com uma abordagem acolhedora, ética e livre de julgamentos, no seu tempo.</p>
+    <div class="hero-ctas">
+      <a href="https://wa.me/5581997082433?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20sess%C3%A3o." class="btn-primary">Agendar uma sessão →</a>
+      <a href="#sobre" class="btn-secondary">Conhecer a abordagem</a>
+    </div>
+  </div>
+  <div class="hero-figure">
+    <div class="hero-photo">
+      <img src="assets/alicia-foto.jpeg" alt="Alícia Lemos Melo, psicóloga clínica, sorrindo em seu consultório" width="1536" height="1024" fetchpriority="high" decoding="async">
+    </div>
+    <div class="credential-float">
+      <div class="psi-badge">Ψ</div>
+      <div>
+        <div class="cred-name">Alícia Lemos Melo</div>
+        <div class="cred-role">Psicóloga Clínica</div>
+        <div class="cred-crp">CRP 02/34070</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="strip">
+  <div class="strip-track">
+    <span>Escuta</span><span>Acolhimento</span><span>Empatia</span><span>Transformação</span>
+    <span>Escuta</span><span>Acolhimento</span><span>Empatia</span><span>Transformação</span>
+  </div>
+</div>
+
+<section class="sobre" id="sobre">
+  <div class="section-inner sobre-grid">
+    <div class="sobre-quote reveal">
+      "Acredito que cada pessoa possui uma história única. Por isso, conduzo cada processo terapêutico de forma individualizada, respeitando o tempo, as necessidades e os objetivos de quem confia em meu trabalho."
+    </div>
+    <div class="sobre-body reveal">
+      <p>Sou psicóloga formada pela Universidade Federal de Pernambuco (UFPE) e atualmente curso pós-graduação em Neuropsicologia. Minha atuação é fundamentada na Gestalt-terapia, uma abordagem que valoriza o autoconhecimento, a consciência das próprias experiências e o desenvolvimento de formas mais saudáveis de se relacionar consigo mesmo e com os outros.</p>
+      <p>Atendo crianças, adultos e casais, oferecendo um espaço de acolhimento, presença, empatia e escuta ética, onde cada pessoa pode se sentir segura para expressar sua história sem julgamentos. Meu objetivo é auxiliar meus pacientes a reencontrarem sentido em suas experiências, compreenderem melhor suas emoções, fortalecerem a autoestima e a autoimagem e desenvolverem recursos para lidar com desafios como ansiedade, depressão e conflitos da vida cotidiana.</p>
+      <div class="sobre-signature">
+        <div class="line"></div>
+        <div class="cred">CRP 02/34070 · Gestalt-terapia · Atendimento online</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="publicos">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <div class="eyebrow">Atendimento</div>
+      <h2>Para cada fase e cada vínculo</h2>
+      <p>O trabalho se adapta a quem chega — seja uma criança, um adulto ou um casal.</p>
+    </div>
+    <div class="areas-grid">
+      <div class="area-card reveal">
+        <div class="mark">Ψ</div>
+        <h3>Atendimento infantil</h3>
+        <p>Através de uma abordagem lúdica, ajudo crianças a reconhecerem e regularem suas emoções, lidarem com frustrações e desenvolverem habilidades sociais.</p>
+      </div>
+      <div class="area-card reveal">
+        <div class="mark">Ψ</div>
+        <h3>Atendimento a adultos</h3>
+        <p>Um espaço para compreender melhor suas emoções, fortalecer autoestima e autoimagem, e lidar com ansiedade, depressão e desafios do cotidiano.</p>
+      </div>
+      <div class="area-card reveal">
+        <div class="mark">Ψ</div>
+        <h3>Atendimento a casais</h3>
+        <p>Favoreço o diálogo, o fortalecimento da conexão entre os parceiros e a resolução de conflitos, construindo relações e famílias mais saudáveis.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="processo" id="processo">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <div class="eyebrow" style="color:var(--clay);">Como funciona</div>
+      <h2>Três passos até a primeira sessão</h2>
+      <p>Um processo simples — o único trabalho seu é chegar e falar.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><div class="num">01</div><h3>Contato inicial</h3><p>Me conta brevemente o que te trouxe até aqui, e a gente combina o melhor horário pra começar.</p></div>
+      <div class="step reveal"><div class="num">02</div><h3>Primeira sessão</h3><p>Nosso primeiro encontro é de acolhimento — quero entender sua história e alinhar juntos as expectativas do processo.</p></div>
+      <div class="step reveal"><div class="num">03</div><h3>Acompanhamento</h3><p>Seguimos com sessões semanais ou quinzenais, online, no ritmo que fizer sentido pra você.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-final" id="agendar">
+  <div class="section-inner">
+    <div class="cta-box reveal">
+      <div class="psi-deco">Ψ</div>
+      <h2>Dar o primeiro passo é só mandar uma mensagem.</h2>
+      <a href="https://wa.me/5581997082433?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20sess%C3%A3o." class="btn-primary">Agendar pelo WhatsApp →</a>
+    </div>
+
+    <div class="form-card reveal">
+      <h3>Prefere começar por aqui?</h3>
+      <p class="form-lede">Nosso primeiro encontro é um momento de acolhimento. Quero conhecer a sua história e, juntos, alinhar as expectativas para o processo terapêutico.</p>
+      <form id="contact-form">
+        <div class="form-row">
+          <div class="field">
+            <label for="f-nome">Nome</label>
+            <input type="text" id="f-nome" name="nome" required>
+          </div>
+          <div class="field">
+            <label for="f-contato">E-mail ou telefone (opcional)</label>
+            <input type="text" id="f-contato" name="contato">
+          </div>
+        </div>
+        <div class="field full">
+          <label for="f-mensagem">O que te trouxe até aqui?</label>
+          <textarea id="f-mensagem" name="mensagem" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="form-submit">Enviar pelo WhatsApp →</button>
+        <div class="form-note">Ao enviar, o WhatsApp abre em uma nova aba com a mensagem pronta — nada é enviado automaticamente sem sua confirmação.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="f-brand">Alícia Lemos Melo</div>
+      <div class="f-crp">Psicóloga Clínica · CRP 02/34070</div>
+    </div>
+    <div class="footer-links">
+      <a href="#sobre">Sobre</a>
+      <a href="#publicos">Atendimento</a>
+      <a href="#agendar">Agendar</a>
+      <a href="privacidade.html">Política de Privacidade</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const form = document.getElementById('contact-form');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    const nome = document.getElementById('f-nome').value.trim();
+    const contato = document.getElementById('f-contato').value.trim();
+    const mensagem = document.getElementById('f-mensagem').value.trim();
+
+    let texto = `Olá, meu nome é ${nome}.`;
+    if(contato){ texto += ` Contato: ${contato}.`; }
+    texto += ` ${mensagem}`;
+
+    const url = `https://wa.me/5581997082433?text=${encodeURIComponent(texto)}`;
+    window.open(url, '_blank');
+  });
+
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold:0.15});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+
+</body>
+</html>
