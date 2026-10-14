@@ -22,6 +22,7 @@ DOMAIN = ""
 WA = "5581997082433"
 EMAIL = "alicialemos.psi@gmail.com"
 INSTA = "psi.alicialemos"
+LINKEDIN = "https://www.linkedin.com/in/alicialemos"
 CRP = "CRP 02/34070"
 TITLE = "Psicóloga Clínica, Acompanhante Terapêutica e Aplicadora ABA"
 
@@ -50,6 +51,7 @@ ICONS = {
     "estrela": '<path d="m12 3.5 2.4 5.3 5.8.6-4.3 3.9 1.2 5.7L12 16.1 6.9 19l1.2-5.7L3.8 9.4l5.8-.6L12 3.5Z"/>',
     "email": '<rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="m4 7 8 6 8-6"/>',
     "instagram": '<rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.9" fill="currentColor"/>',
+    "linkedin": '<rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10.5V17M8 7.3v.1"/><path d="M11.5 17v-6.5"/><path d="M11.5 13.5c0-1.8 1.1-3 2.6-3s2.4 1 2.4 3V17"/>',
     "local": '<path d="M12 21s-6.5-6.2-6.5-11a6.5 6.5 0 0 1 13 0c0 4.8-6.5 11-6.5 11Z"/><circle cx="12" cy="10" r="2.3"/>',
     "tela": '<rect x="3" y="4.5" width="18" height="12" rx="2"/><path d="M8.5 20h7M12 16.5V20"/>',
 }
@@ -124,6 +126,7 @@ FOOTER = f'''<footer class="site-footer">
           <li><a href="{AGENDAR}" target="_blank" rel="noopener">WhatsApp: (81) 99708-2433</a></li>
           <li><a href="mailto:{EMAIL}">{EMAIL}</a></li>
           <li><a href="https://instagram.com/{INSTA}" target="_blank" rel="noopener">Instagram: @{INSTA}</a></li>
+          <li><a href="{LINKEDIN}" target="_blank" rel="noopener">LinkedIn: Alícia Lemos</a></li>
           <li><a href="privacidade.html">Política de privacidade e dados pessoais</a></li>
         </ul>
       </div>
@@ -242,7 +245,7 @@ FAQ = [
     ("Você realiza avaliação psicológica ou neuropsicológica?",
      "Não realizo avaliações psicológicas ou neuropsicológicas ainda, pois estou finalizando minha especialização, mas posso oferecer acompanhamento psicológico e indicar profissionais ou serviços adequados quando necessário."),
     ("Os atendimentos são presenciais ou on-line?",
-     "Os atendimentos podem ser presenciais, on-line ou realizados em ambas as modalidades, conforme o serviço e a disponibilidade."),
+     "Os atendimentos podem ser on-line ou presenciais em Recife, realizados em domicílio ou na escola, conforme o serviço e a disponibilidade. A modalidade de cada caso é combinada no primeiro contato."),
     ("Qual é o valor da sessão?",
      "Os valores variam conforme a modalidade, a duração e as condições do atendimento. As informações são fornecidas de maneira transparente no primeiro contato."),
     ("Como funciona o primeiro contato?",
@@ -258,7 +261,7 @@ FAQ_LD = (
     )
     + "]}</script>\n"
 )
-PERSON_LD = f'''<script type="application/ld+json">{{"@context":"https://schema.org","@type":"Psychologist","name":"Alícia Lemos","description":"{TITLE}. {CRP}.","telephone":"+55 81 99708-2433","email":"{EMAIL}","image":"{DOMAIN}/assets/img/compartilhar.jpg","address":{{"@type":"PostalAddress","addressLocality":"Recife","addressRegion":"PE","addressCountry":"BR"}},"areaServed":"Recife e atendimento on-line","sameAs":["https://instagram.com/{INSTA}"]}}</script>
+PERSON_LD = f'''<script type="application/ld+json">{{"@context":"https://schema.org","@type":"Psychologist","name":"Alícia Lemos","description":"{TITLE}. {CRP}.","telephone":"+55 81 99708-2433","email":"{EMAIL}","image":"{DOMAIN}/assets/img/compartilhar.jpg","address":{{"@type":"PostalAddress","addressLocality":"Recife","addressRegion":"PE","addressCountry":"BR"}},"areaServed":"Recife e atendimento on-line","sameAs":["https://instagram.com/{INSTA}","{LINKEDIN}"]}}</script>
 '''
 
 areas = [
@@ -301,12 +304,12 @@ index_body = f'''<section class="hero">
         <a class="btn btn-primary" href="#atendimentos">Conheça meus atendimentos</a>
         <a class="btn btn-ghost" href="{wa("Olá, Alícia! Gostaria de agendar uma conversa.")}" target="_blank" rel="noopener">{WA_SVG}Agende uma conversa</a>
       </div>
-      <div class="hero-meta"><span>Recife – PE</span><span>Atendimento presencial e on-line</span><span>Crianças, adolescentes, adultos, casais e famílias</span></div>
+      <div class="hero-meta"><span>Recife – PE</span><span>Atendimento on-line, domiciliar e escolar</span><span>Crianças, adolescentes, adultos, casais e famílias</span></div>
     </div>
     <div class="hero-photo">
       <picture>
         <source media="(max-width: 820px)" srcset="assets/img/alicia-retrato-480.webp">
-        <img src="assets/img/alicia-retrato-720.webp" width="720" height="957" alt="Alícia Lemos, psicóloga, sorrindo sentada em uma poltrona no consultório" fetchpriority="high">
+        <img src="assets/img/alicia-retrato-720.webp" width="720" height="957" alt="Alícia Lemos, psicóloga, sorrindo sentada em uma poltrona" fetchpriority="high">
       </picture>
       <div class="hero-badge"><b>Alícia Lemos</b>Psicóloga Clínica · {CRP}</div>
     </div>
@@ -358,7 +361,8 @@ index_body = f'''<section class="hero">
         <li><a href="{AGENDAR}" target="_blank" rel="noopener">{icon("conversa")}<span><b>WhatsApp</b><small>(81) 99708-2433</small></span></a></li>
         <li><a href="mailto:{EMAIL}">{icon("email")}<span><b>E-mail</b><small>{EMAIL}</small></span></a></li>
         <li><a href="https://instagram.com/{INSTA}" target="_blank" rel="noopener">{icon("instagram")}<span><b>Instagram</b><small>@{INSTA}</small></span></a></li>
-        <li><div>{icon("local")}<span><b>Onde atendo</b><small>Recife – PE, presencial · On-line, conforme o serviço</small></span></div></li>
+        <li><a href="{LINKEDIN}" target="_blank" rel="noopener">{icon("linkedin")}<span><b>LinkedIn</b><small>Alícia Lemos</small></span></a></li>
+        <li><div>{icon("local")}<span><b>Onde atendo</b><small>On-line · Em Recife, em casa ou na escola, conforme o serviço</small></span></div></li>
       </ul>
     </div>
     <div class="form-card">
@@ -671,7 +675,7 @@ sobre_body = f'''<section class="page-hero">
     <div class="about-photo">
       <picture>
         <source media="(max-width: 820px)" srcset="assets/img/alicia-consultorio-768.webp">
-        <img src="assets/img/alicia-consultorio-1200.webp" width="1200" height="800" alt="Alícia Lemos sentada no consultório, com a placa Psicóloga Clínica, CRP 02/34070, sobre a mesa">
+        <img src="assets/img/alicia-consultorio-1200.webp" width="1200" height="800" alt="Alícia Lemos sentada à mesa, com a placa Psicóloga Clínica, CRP 02/34070, sobre a mesa">
       </picture>
     </div>
     <div class="prose">
