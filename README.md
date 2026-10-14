@@ -32,15 +32,19 @@ O visual (cores, fontes, espaçamentos) fica em `assets/css/site.css`; o menu do
 
 ## Decisões
 
-- **HTML e CSS puros**, sem framework: carrega rápido e hospeda de graça na Cloudflare Pages.
+- **HTML e CSS puros**, sem framework nem build: carrega rápido e publica direto na Vercel.
 - **Formulário sem servidor:** monta a mensagem e abre o WhatsApp; nada é enviado nem guardado pelo site, e ele não pede informações de saúde.
 - **Ética profissional:** sem promessas de resultado; avaliação psicológica e neuropsicológica aparecem como não oferecidas no momento (com encaminhamento); acompanhamento terapêutico e ABA apresentados separados da psicoterapia.
 - **Acessibilidade:** contraste AA, textos alternativos, navegação por teclado, link "pular para o conteúdo" e menu acessível.
 - **SEO:** título e descrição próprios por página, dados estruturados (profissional e perguntas frequentes) e `robots.txt`.
-- **Segurança:** `_headers` com política de conteúdo (CSP), HSTS e outros cabeçalhos; `_redirects` esconde os arquivos internos.
+- **Segurança:** `vercel.json` com política de conteúdo (CSP), HSTS e outros cabeçalhos; `.vercelignore` deixa os arquivos internos fora do site publicado.
 
-## Publicação (Cloudflare Pages)
+## Publicação (Vercel)
 
-1. Workers & Pages → Create → **Pages** → conectar este repositório.
-2. Build command: *(vazio)* · Output directory: `/`.
-3. Em **Custom domains**, adicionar o domínio `.psc.br`.
+1. Em vercel.com: **Add New → Project** e importar este repositório do GitHub.
+2. Framework Preset: **Other** · Build Command: *(vazio)* · Output Directory: *(vazio, raiz)*.
+3. Em **Settings → Domains**, adicionar o domínio `.psc.br` e seguir as instruções de DNS.
+
+O `vercel.json` já ativa endereços sem `.html` (ex.: `/neurodivergencias`) e os cabeçalhos de segurança.
+
+> O plano gratuito da Vercel (Hobby) é só para uso não comercial. Como é o site profissional de uma cliente, o plano adequado é o Pro.
