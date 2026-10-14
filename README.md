@@ -39,13 +39,16 @@ O visual (cores, fontes, espaçamentos) fica em `assets/css/site.css`; o menu do
 - **SEO:** título e descrição próprios por página, dados estruturados (profissional e perguntas frequentes) e `robots.txt`.
 - **Segurança:** `_headers` com política de conteúdo (CSP), HSTS e outros cabeçalhos. A publicação copia só os arquivos do site para `dist/`, então `ferramentas/` e o README não ficam públicos.
 
-## Publicação (Cloudflare Pages)
+## Publicação (Cloudflare)
 
-1. No painel da Cloudflare: **Workers & Pages → Create → Pages → Connect to Git** e escolher este repositório.
-2. Configuração do build:
-   - **Framework preset:** None
-   - **Build command:** `sh ferramentas/preparar-publicacao.sh`
-   - **Build output directory:** `dist`
-3. Em **Custom domains**, adicionar o domínio `.psc.br`.
+No painel da Cloudflare: **Workers & Pages → Create → Import a repository** e escolher este repositório.
 
-A Cloudflare Pages já serve as páginas sem `.html` (ex.: `/neurodivergencias`) e aplica os cabeçalhos do `_headers`.
+- **Project name:** `alicia-lemos` (o mesmo `name` do `wrangler.jsonc`)
+- **Build command:** `sh ferramentas/preparar-publicacao.sh`
+- **Deploy command:** `npx wrangler deploy`
+
+O build copia só os arquivos do site para `dist/` (ferramentas/ e README ficam de fora), e o `wrangler.jsonc` publica essa pasta: páginas sem `.html` (ex.: `/neurodivergencias`), página 404 própria e os cabeçalhos de segurança do `_headers`. A cada push na `main`, a Cloudflare publica sozinha.
+
+Também funciona como **Pages** (Create → Pages → Connect to Git), com o mesmo build command e **Build output directory** `dist`.
+
+Domínio: em **Settings → Domains & Routes** (Workers) ou **Custom domains** (Pages), adicionar o `.psc.br`.

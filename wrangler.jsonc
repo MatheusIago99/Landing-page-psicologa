@@ -1,0 +1,12 @@
+{
+  // Publicação na Cloudflare como Worker de arquivos estáticos.
+  // O nome precisa ser o mesmo "Project name" escolhido no painel.
+  "name": "alicia-lemos",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    // Pasta gerada pelo comando de build: sh ferramentas/preparar-publicacao.sh
+    "directory": "./dist",
+    "not_found_handling": "404-page",
+    "html_handling": "auto-trailing-slash"
+  }
+}
