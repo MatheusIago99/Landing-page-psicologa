@@ -316,7 +316,6 @@ index_body = f'''<section class="hero">
         <a class="btn btn-primary" href="#atendimentos">Conheça meus atendimentos</a>
         <a class="btn btn-ghost" href="{wa("Olá, Alícia! Gostaria de agendar uma conversa.")}" target="_blank" rel="noopener">{WA_SVG}Agende uma conversa</a>
       </div>
-      <div class="hero-meta"><span>Recife – PE</span><span>Atendimento on-line, domiciliar e escolar</span><span>Crianças, adolescentes, adultos, casais e famílias</span></div>
     </div>
     <div class="hero-photo">
       <picture>
