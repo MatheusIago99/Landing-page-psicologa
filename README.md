@@ -28,6 +28,7 @@ python3 ferramentas/gerar-site.py
 As páginas `.html` são recriadas. Não edite os `.html` direto: a próxima geração apagaria a mudança.
 Os contatos (WhatsApp, e-mail, Instagram e LinkedIn) ficam nas constantes do início do arquivo.
 O visual (cores, fontes, espaçamentos) fica em `assets/css/site.css`; o menu do celular e o formulário, em `assets/js/site.js`.
+Depois de mudar o CSS ou o JS, gere as páginas de novo: os links ganham `?v=<código>` novo e os navegadores baixam a versão atualizada (sem isso, guardariam a antiga por até 7 dias).
 
 **Quando o domínio estiver no ar**, preencha `DOMAIN = "https://seu-dominio"` no início de `ferramentas/gerar-site.py` e gere de novo: as páginas ganham o endereço oficial, a imagem de compartilhamento passa a aparecer no WhatsApp e é criado o `sitemap.xml` para o Google.
 
