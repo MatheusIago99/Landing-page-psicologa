@@ -11,6 +11,7 @@ import sys
 from html import escape
 from urllib.parse import quote
 
+import hashlib
 import os
 
 # Por padrão, gera as páginas na pasta acima de "ferramentas/" (a raiz do site).
@@ -19,6 +20,17 @@ OUT = sys.argv[1] if len(sys.argv) > 1 else os.path.join(os.path.dirname(os.path
 # Com ele preenchido, as páginas ganham endereço oficial (canonical), a imagem de
 # compartilhamento funciona no WhatsApp e é gerado o sitemap.xml para o Google.
 DOMAIN = ""
+
+
+def versao(caminho):
+    """Código curto que muda quando o arquivo muda: força o navegador a baixar o CSS/JS novo."""
+    raiz = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
+    with open(os.path.join(raiz, caminho), "rb") as f:
+        return hashlib.sha256(f.read()).hexdigest()[:8]
+
+
+CSS_V = versao("assets/css/site.css")
+JS_V = versao("assets/js/site.js")
 WA = "5581997082433"
 EMAIL = "alicialemos.psi@gmail.com"
 INSTA = "psi.alicialemos"
@@ -138,7 +150,7 @@ FOOTER = f'''<footer class="site-footer">
   </div>
 </footer>
 <a class="wa-float" href="{AGENDAR}" target="_blank" rel="noopener" aria-label="Conversar pelo WhatsApp">{WA_SVG}</a>
-<script src="assets/js/site.js" defer></script>'''
+<script src="assets/js/site.js?v={JS_V}" defer></script>'''
 
 
 PAGES = []
@@ -168,7 +180,7 @@ def page(filename, title, description, body, extra_head=""):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400&family=Inter:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/site.css?v={CSS_V}">
 {extra_head}</head>
 <body>
 {header(filename)}
