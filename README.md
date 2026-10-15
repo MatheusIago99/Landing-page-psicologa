@@ -49,7 +49,7 @@ No painel da Cloudflare: **Workers & Pages → Create → Import a repository** 
 - **Build command:** `sh ferramentas/preparar-publicacao.sh`
 - **Deploy command:** `npx wrangler deploy`
 
-O build copia só os arquivos do site para `dist/` (ferramentas/ e README ficam de fora), e o `wrangler.jsonc` publica essa pasta: páginas sem `.html` (ex.: `/neurodivergencias`), página 404 própria e os cabeçalhos de segurança do `_headers`. A cada push na `main`, a Cloudflare publica sozinha. Atenção: só commits feitos pela conta dona do repositório disparam a build; se um push não publicar, faça qualquer commit pelo próprio GitHub (o **Retry build** não serve: ele refaz o commit antigo).
+O build copia só os arquivos do site para `dist/` (ferramentas/ e README ficam de fora), e o `wrangler.jsonc` publica essa pasta: páginas sem `.html` (ex.: `/neurodivergencias`), página 404 própria e os cabeçalhos de segurança do `_headers`. A cada push na `main`, a Cloudflare publica sozinha. Se um push não aparecer em **Deployments**, refaça a conexão em **Settings → Build** (Disconnect e Connect); o **Retry build** não serve, pois refaz o commit antigo.
 
 Também funciona como **Pages** (Create → Pages → Connect to Git), com o mesmo build command e **Build output directory** `dist`.
 
